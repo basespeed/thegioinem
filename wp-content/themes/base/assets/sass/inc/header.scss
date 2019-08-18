@@ -1,0 +1,127 @@
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+*{
+  font-family: Arial;
+}
+.header{
+  .top{
+    background-image: linear-gradient(to bottom,#fff 0,#eee 100%);
+    .container{
+      display: flex;
+      position: relative;
+    }
+    ul{
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      padding-left: 0px;
+      width: 100%;
+      margin: 0px;
+      li{
+        list-style: none;
+        padding: 10px 0px;
+        padding-right: 10px;
+        a{
+          text-decoration: none;
+          font-size: 12px;
+          color: #0896e6;
+          font-weight: bold;
+          border-right: 1px solid #ccc;
+          padding-right: 10px;
+        }
+      }
+      li:last-child{
+        a{
+          border-right: none;
+        }
+      }
+    }
+  }
+  .mini_cart{
+    z-index: 100;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: #FFF;
+    .insider{
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px;
+      display: flex;
+      padding: 10px;
+      width: 320px;
+      z-index: 10;
+      border-radius: 0 0 10px 10px;
+      .img{
+        img{
+          width: 60px;
+          margin-top: 15px;
+        }
+      }
+      .info{
+        padding-left: 15px;
+      }
+      h3{
+        font-size: 13px;
+        color: #666;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      p{
+        color: #f1770f;
+        margin: 10px 0 0;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+      }
+      .cart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: #1C74B9;
+        margin-top: 10px;
+        img{
+          width: 20px;
+          height: auto;
+          margin-right: 10px;
+        }
+
+
+      }
+    }
+  }
+
+  .logo_main{
+    .container{
+      display: flex;
+      align-items: center;
+      padding: 30px 0px;
+    }
+    .logo{
+      width: 300px;
+    }
+    h3{
+      color: #1175BE;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 500;
+      padding-left: 30px;
+    }
+  }
+  .main_menu{
+    .container{
+      background: #0E87C8;
+      display: flex;
+      align-items: center;
+      h3{
+        position: relative;
+        &:before{
+          content: "";
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

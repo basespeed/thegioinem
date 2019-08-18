@@ -97,6 +97,7 @@
       display: flex;
       align-items: center;
       padding: 30px 0px;
+      padding-bottom: 0px;
     }
     .logo{
       width: 300px;
@@ -111,15 +112,127 @@
   }
   .main_menu{
     .container{
-      background: #0E87C8;
       display: flex;
       align-items: center;
+      position: relative;
       h3{
         position: relative;
+        width: 302px;
+        height: 62px;
+        text-align: center;
+        line-height: 62px;
+        color: #FFF;
+        text-transform: uppercase;
         &:before{
           content: "";
           display: block;
           width: 100%;
+        }
+      }
+      .right_menu{
+        width: calc(100% - 302px);
+        display: flex;
+        background: #0E87C8;
+        height: 42px;
+        align-items: center;
+        margin-top: -1px;
+        .tk_thuong_hieu{
+          margin-left: 15px;
+        }
+        .flex-grow{
+          flex-grow: 1;
+        }
+        .tk_he_thong{
+          margin-right: 15px;
+        }
+        .toggle_tk{
+          display: flex;
+          align-items: center;
+          background: #70BF44;
+          border:2px solid #fff;
+          border-radius: 10px;
+          height: 30px;
+          justify-content: center;
+          h3{
+            margin:0px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: -50px;
+            margin-left: -50px;
+          }
+          .icon{
+            display: flex;
+            align-items: center;
+            img{
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+    .menu_nav{
+      position: absolute;
+      left: 9px;
+      top: 82px;
+      ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background: #FFF;
+        li{
+          margin-top: -1px;
+          position: relative;
+          a{
+            display: block;
+            width: 100%;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            padding: 5px 10px;
+            position: relative;
+            color: #363636;
+            img,span{
+              position: relative;
+              z-index: 10;
+            }
+          }
+          img{
+            width: 35px;
+          }
+          .sub-menu{
+            width: 100%;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            left: 283px;
+            margin-top: 1px;
+            transition: 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            li{
+              &:hover{
+                a{
+                  color: #fff;
+                  background: #097CBC;
+                }
+              }
+            }
+          }
+          &:hover{
+            .sub-menu{
+              opacity: 1;
+              visibility: visible;
+            }
+            a{
+              color: #fff;
+              background: #097CBC;
+            }
+            ul{
+              a{
+                background: #fff;
+                color: #363636;
+              }
+            }
+          }
         }
       }
     }

@@ -66,7 +66,15 @@
         <div class="main_menu">
             <div class="container">
                 <div class="menu">
-                    <h3><i class="fa fa-bars" aria-hidden="true"></i> Danh mục sản phẩm</h3>
+                    <h3  style="background:url('<?php echo get_template_directory_uri(); ?>/assets/img/form-title-bg.png') no-repeat;"><i class="fa fa-bars" aria-hidden="true"></i> Danh mục sản phẩm</h3>
+                    <div class="menu_nav">
+                        <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'menu-1',
+                                'menu_id'        => 'primary-menu',
+                            ) );
+                        ?>
+                    </div>
                 </div>
                 <div class="right_menu">
                     <div class="tk_thuong_hieu">
@@ -74,11 +82,12 @@
                             <h3>Tìm theo thương hiệu</h3>
                             <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/down.png" alt="icon"></div>
                         </div>
-
                     </div>
 
+                    <div class="flex-grow"></div>
+
                     <div class="tk_he_thong">
-                        <div class="toggle_tk" style="<?php echo get_template_directory_uri(); ?>/">
+                        <div class="toggle_tk">
                             <h3>Hệ thống thế giới nệm</h3>
                             <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/down.png" alt="icon"></div>
                         </div>
@@ -95,8 +104,5 @@
 
 <?php
 //the_custom_logo();
-/*wp_nav_menu( array(
-    'theme_location' => 'menu-1',
-    'menu_id'        => 'primary-menu',
-) );*/
+/**/
 ?>
